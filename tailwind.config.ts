@@ -47,6 +47,21 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Celebration theme colors
+        emerald: {
+          DEFAULT: "hsl(var(--emerald))",
+          light: "hsl(var(--emerald-light))",
+          dark: "hsl(var(--emerald-dark))",
+        },
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          light: "hsl(var(--gold-light))",
+          dark: "hsl(var(--gold-dark))",
+        },
+        celebration: {
+          white: "hsl(var(--warm-white))",
+          black: "hsl(var(--soft-black))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -84,6 +99,11 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in-up": "fadeInUp 0.8s ease-out forwards",
+        "slide-in-left": "slideInLeft 0.6s ease-out forwards",
+        "slide-in-right": "slideInRight 0.6s ease-out forwards",
+        "gentle-float": "gentleFloat 3s ease-in-out infinite",
+        "spiral-rotate": "spiralRotate 4s ease-in-out infinite",
       },
     },
   },

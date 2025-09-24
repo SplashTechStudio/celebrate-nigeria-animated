@@ -1,12 +1,25 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import HeroSection from "@/components/celebration/HeroSection";
+import StatementsCarousel from "@/components/celebration/StatementsCarousel";
+import PhotoSlider from "@/components/celebration/PhotoSlider";
+import VideoGallery from "@/components/celebration/VideoGallery";
+import WishesSection from "@/components/celebration/WishesSection";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen overflow-x-hidden">
+      <HeroSection />
+      <StatementsCarousel />
+      <PhotoSlider />
+      <VideoGallery />
+      <WishesSection />
+      
+      {/* Footer */}
+      <footer className="py-12 text-center border-t border-gold/20">
+        <p className="text-celebration-white/60">
+          Celebrating a life dedicated to building a sustainable Nigeria
+        </p>
+        <div className="mt-4 w-16 h-1 bg-gradient-to-r from-emerald to-gold mx-auto rounded-full" />
+      </footer>
     </div>
   );
 };
