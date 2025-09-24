@@ -53,9 +53,8 @@ const VideoGallery = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div
-          className={`text-center mb-16 transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gradient-gold mb-4">
             Legacy in Motion
@@ -70,9 +69,8 @@ const VideoGallery = () => {
           {videos.map((video, index) => (
             <div
               key={video.id}
-              className={`relative group cursor-pointer transition-all duration-700 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-              }`}
+              className={`relative group cursor-pointer transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                }`}
               style={{ transitionDelay: `${index * 150}ms` }}
               onClick={() => setActiveIndex(index)}
             >
@@ -112,15 +110,13 @@ const VideoGallery = () => {
       {activeVideo && (
         <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
           <div className="relative w-full max-w-5xl animate-fadeIn">
-            {/* Close Button */}
+            {/* Clean Close Button */}
             <button
               onClick={() => setActiveIndex(null)}
-              className="absolute -top-12 right-0 text-white hover:text-gold group"
+              className="absolute -top-10 right-0 text-white hover:text-gold transition"
+              aria-label="Close"
             >
-              <X size={36} />
-              <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-sm bg-black/70 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100">
-                Close
-              </span>
+              <X size={32} />
             </button>
 
             {/* Prev Button */}
@@ -139,20 +135,24 @@ const VideoGallery = () => {
               <ChevronRight className="text-white w-6 h-6" />
             </button>
 
-            {/* Video Player */}
-            <video
-              key={activeVideo.id}
-              className="w-auto h-[60%] rounded-xl shadow-lg"
-              src={activeVideo.videoUrl}
-              controls
-              autoPlay
-            />
+            {/* Video Player with 60vh height */}
+            <div className="w-full h-[80vh] md:h-[70vh] rounded-xl overflow-hidden shadow-lg flex items-center justify-center bg-black">
+              <video
+                key={activeVideo.id}
+                className="max-h-full max-w-full object-contain"
+                src={activeVideo.videoUrl}
+                controls
+                autoPlay
+              />
+            </div>
+
             <h3 className="text-center text-white mt-4 text-xl font-semibold">
               {activeVideo.title}
             </h3>
           </div>
         </div>
       )}
+
     </section>
   );
 };
