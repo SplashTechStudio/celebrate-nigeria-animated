@@ -5,43 +5,47 @@ import { Heart, Users, MessageCircle } from "lucide-react";
 const wishes = [
   {
     id: 1,
-    type: "video",
-    author: "Dr. Amina Kano",
-    relationship: "Colleague & Friend",
-    content: "Your dedication to sustainable development has inspired countless people across Nigeria...",
+    type: "text",
+    author: "Jafaru Emmanuel Odion ",
+    relationship: "Mentee",
+    content: "My oga like none other. Thank you for the privilege of working with you sir. for the gift of association. for the opportunity to learn from you. I am beyond grateful. It is my prayers that in this new season, you get the attention of ears that matters without stress. you grow in influence, wisdom and stature. You enjoy peace without borders. may your joy be full. Happy birthday sir. I do not take you for granted sir. It is an honour I would forever cherish dearly.",
     thumbnail: "/placeholder.svg?height=200&width=300",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
   {
     id: 2,
     type: "image",
-    author: "Chief Emeka Okafor",
-    relationship: "Business Partner",
-    content: "Happy birthday to a true visionary! Your leadership continues to shape our nation's future.",
+    author: "Favour Ameh ",
+    relationship: "Executive Assistant",
+    content: `Dear Mr Oje,\n\n 
+            Please accept my warmest wishes on your birthday.\n\n
+            Thank you for your exceptional leadership and mentorship. Your wisdom and advice have been a great gift, and your kindness creates a work environment we all appreciate. It is a privilege to learn from someone who leads with such strength and character.\n\n
+            On your birthday, I pray that you are blessed with peace, prosperity, and happiness in the year to come. May you receive all the joy you so generously give to others.\n\n
+            I am truly grateful for the gift that you are to our team and to me personally.\n\n
+            Happy Birthday and best wishes,\n`,
     imageUrl: "/placeholder.svg?height=400&width=600",
   },
   {
     id: 3,
     type: "text",
-    author: "Prof. Fatima Abdullahi",
-    relationship: "Academic Collaborator",
-    content: "On this special day, we celebrate not just your birthday, but your unwavering commitment to building a sustainable Nigeria. Your work in environmental policy has created lasting change that will benefit generations to come. Wishing you continued success and many more years of impactful leadership!",
+    author: "Peter",
+    relationship: "Staff",
+    content: "Happy birthday to you sir!!🙌🏽, I wish you a long life and prosperity 🎉. I ask that the good Lord bless you with all your heart desires and you never have a cause for sorrow in Jesus name. Amen🙏🏽.",
   },
   {
     id: 4,
     type: "video",
-    author: "Hon. Peter Okonkwo",
-    relationship: "Legislative Partner",
-    content: "Thank you for your tireless work in environmental conservation...",
+    author: "Chibuike",
+    relationship: "Staff",
+    content: "Happy birthday sir I wish you many more fruitful years of abundance. Cheers to you sir.",
     thumbnail: "/placeholder.svg?height=200&width=300",
     videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
   {
     id: 5,
     type: "image",
-    author: "Mrs. Grace Adebayo",
+    author: "Kate",
     relationship: "Community Leader",
-    content: "Your grassroots approach to development has touched so many lives in our communities.",
+    content: "Many more amazing years to come 🙏.",
     imageUrl: "/placeholder.svg?height=400&width=600",
   },
 ];
@@ -120,9 +124,8 @@ const WishesSection = () => {
           {wishes.map((wish, index) => (
             <div
               key={wish.id}
-              className={`bg-card/80 backdrop-blur-sm rounded-2xl p-6 cursor-pointer transition-all duration-500 hover:celebration-glow hover:scale-105 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-              }`}
+              className={`bg-card/80 backdrop-blur-sm rounded-2xl p-6 cursor-pointer transition-all duration-500 hover:celebration-glow hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
               style={{ transitionDelay: `${index * 200}ms` }}
               onClick={() => setSelectedWish(selectedWish === wish.id ? null : wish.id)}
             >
@@ -145,38 +148,20 @@ const WishesSection = () => {
 
               {/* Wish Content */}
               {selectedWish === wish.id && renderWishContent(wish)}
-              
-              <p className={`text-celebration-white/80 leading-relaxed ${
-                selectedWish === wish.id && wish.type !== 'text' ? 'mt-4' : ''
-              } ${
-                wish.type === 'text' ? 'text-base' : 'text-sm'
-              }`}>
+
+              <p className={`text-celebration-white/80 leading-relaxed ${selectedWish === wish.id && wish.type !== 'text' ? 'mt-4' : ''
+                } ${wish.type === 'text' ? 'text-base' : 'text-sm'
+                }`}>
                 {wish.content}
               </p>
 
               {/* Expand Indicator */}
               <div className="mt-4 flex justify-center">
-                <div className={`w-8 h-1 bg-gold rounded-full transition-transform duration-300 ${
-                  selectedWish === wish.id ? 'rotate-90' : ''
-                }`} />
+                <div className={`w-8 h-1 bg-gold rounded-full transition-transform duration-300 ${selectedWish === wish.id ? 'rotate-90' : ''
+                  }`} />
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center mt-16">
-          <div className="bg-card/60 backdrop-blur-sm rounded-2xl p-8 max-w-2xl mx-auto celebration-glow">
-            <h3 className="text-2xl font-bold text-gradient-gold mb-4">
-              Join the Celebration
-            </h3>
-            <p className="text-celebration-white/80 mb-6">
-              Add your own message of appreciation and birthday wishes
-            </p>
-            <button className="bg-gradient-to-r from-emerald to-emerald-light text-celebration-white px-8 py-3 rounded-full font-semibold hover:scale-105 transition-transform duration-300 celebration-glow">
-              Send Your Wishes
-            </button>
-          </div>
         </div>
       </div>
     </section>

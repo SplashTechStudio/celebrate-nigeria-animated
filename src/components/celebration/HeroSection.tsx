@@ -51,22 +51,32 @@ const HeroSection = () => {
 
       {/* Main Content */}
       <div className={`text-center px-6 max-w-4xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className="transition-all duration-1000 ease-in-out opacity-100 translate-x-0 inset-0" >
+          <p className="text-xl md:text-2xl text-gold mb-8 font-light max-w-2xl mx-auto leading-relaxed">
+            Celebrating <span className="text-lg text-text-gradient-celebration/70 max-w-xl mx-auto">
+            A Father, Mentor, Leader, Visionary
+          </span>
+          </p>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gradient-celebration leading-tight">
+            Dr. OJEHOMON ANETOR
+          </h1>
+        </div>
+
         <div className="relative overflow-hidden">
           {heroTexts.map((text, index) => (
             <div
               key={index}
-              className={`transition-all duration-1000 ease-in-out ${
-                index === currentTextIndex
-                  ? 'opacity-100 translate-x-0'
-                  : index < currentTextIndex
+              className={`transition-all duration-1800 ease-in-out ${index === currentTextIndex
+                ? 'opacity-100 translate-x-0'
+                : index < currentTextIndex
                   ? 'opacity-0 -translate-x-full absolute inset-0'
                   : 'opacity-0 translate-x-full absolute inset-0'
-              }`}
+                }`}
             >
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gradient-celebration leading-tight">
+              <h1 className="text-3xl md:text-5xl  py-2 font-bold mb-6 text-gradient-celebration leading-tight">
                 {text.title}
               </h1>
-              
+
               <p className="text-xl md:text-2xl text-gold mb-8 font-light max-w-2xl mx-auto leading-relaxed">
                 {text.subtitle}
               </p>
@@ -80,6 +90,7 @@ const HeroSection = () => {
           ))}
         </div>
       </div>
+
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">

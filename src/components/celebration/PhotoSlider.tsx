@@ -2,13 +2,21 @@ import { useEffect, useState } from "react";
 
 // Placeholder images - these would be replaced with actual celebration photos
 const photos = [
-  "/placeholder.svg?height=600&width=800",
-  "/placeholder.svg?height=600&width=800",
-  "/placeholder.svg?height=600&width=800",
-  "/placeholder.svg?height=600&width=800",
-  "/placeholder.svg?height=600&width=800",
-  "/placeholder.svg?height=600&width=800",
-];
+  "/2.jpeg",
+  "/1.jpeg",
+  "/3.jpeg",
+  "/4.jpeg",
+  "/24.jpg",
+  "/21.jpg",
+  "/23.jpg",
+  "/22.jpg",
+  "/25.jpg",
+  "/26.jpg",
+  "/major.jpg",
+  "/tb.jpg",
+  "/tb2.jpg",
+  "/blow.jpg",
+  "/family.jpg",];
 
 const PhotoSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
