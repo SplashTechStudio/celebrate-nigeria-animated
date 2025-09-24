@@ -34,19 +34,11 @@ const wishes = [
   {
     id: 4,
     type: "video",
-    author: "Chibuike",
+    author: "Chibuike Nwakakwa",
     relationship: "Staff",
     content: "Happy birthday sir I wish you many more fruitful years of abundance. Cheers to you sir.",
     thumbnail: "/placeholder.svg?height=200&width=300",
     videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
-  },
-  {
-    id: 5,
-    type: "image",
-    author: "Kate",
-    relationship: "Community Leader",
-    content: "Many more amazing years to come 🙏.",
-    imageUrl: "/placeholder.svg?height=400&width=600",
   },
 ];
 
