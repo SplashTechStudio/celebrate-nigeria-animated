@@ -66,7 +66,7 @@ const PhotoSlider = () => {
             Moments of Impact
           </h2>
           <p className="text-celebration-white/70 text-lg">
-            Capturing years of dedication and service to Nigeria
+            Capturing years of Moments 
           </p>
         </div>
 

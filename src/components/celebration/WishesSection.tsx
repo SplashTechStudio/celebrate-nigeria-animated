@@ -27,13 +27,13 @@ const wishes = [
   {
     id: 3,
     type: "text",
-    author: "Peter",
+    author: "Peter Okpo",
     relationship: "Staff",
     content: "Happy birthday to you sir!!🙌🏽, I wish you a long life and prosperity 🎉. I ask that the good Lord bless you with all your heart desires and you never have a cause for sorrow in Jesus name. Amen🙏🏽.",
   },
   {
     id: 4,
-    type: "video",
+    type: "text",
     author: "Chibuike Nwakakwa",
     relationship: "Staff",
     content: "Happy birthday sir I wish you many more fruitful years of abundance. Cheers to you sir.",
