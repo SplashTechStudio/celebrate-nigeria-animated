@@ -40,6 +40,15 @@ const wishes = [
     thumbnail: "/placeholder.svg?height=200&width=300",
     videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
+    {
+    id: 5,
+    type: "text",
+    author: "Ayo Victor",
+    relationship: "Busines Developer Executive",
+    content: "So many hearty cheers to you Sir. Your admirable knack and drive for excellence has kept me on my toes over the years. Thank so much Sir for the trust and privilege of responsibilities given and opportunity to work under your guide Sir. It's one I hold dear. This to wishing you a beautiful and fulfilling year ahead in health and wealth as you prosper in all your endeavors. Happy birthday once again Sir",
+    thumbnail: "/placeholder.svg?height=200&width=300",
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+  },
 ];
 
 const WishesSection = () => {
